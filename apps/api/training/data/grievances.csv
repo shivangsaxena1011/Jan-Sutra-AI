@@ -1,0 +1,86 @@
+text,label
+"No water supply in our street since morning",Water Supply
+"Pipeline is leaking near the community park",Water Supply
+"Paani nahi aa raha hai hamare ghar mein",Water Supply
+"पानी की सप्लाई दो दिन से बंद है",Water Supply
+"There is dirty water coming from the tap",Water Supply
+"Low pressure in the water connection",Water Supply
+"Nal se paani nahi aa raha",Water Supply
+"Water pipe burst and water is flowing on the road",Water Supply
+"Main pipeline cracked and freshwater is flooding the lane",Water Supply
+"Contaminated muddy water flowing through supply line",Water Supply
+"Bhopal Ward 12 me kal shaam se paani ki problem chal rahi hai",Water Supply
+"PHE tanker has not arrived for three days",Water Supply
+"हमारे इलाके में पीने का पानी बहुत गंदा आ रहा है",Water Supply
+"जल प्रदाय लाइन में रिसाव होने से सड़क पर पानी भर गया है",Water Supply
+"Drinking water supply timings are completely disrupted",Water Supply
+"Colony booster pump is not working hence zero pressure",Water Supply
+"Pani ki pipeline toot gayi hai aur sadak par jal bharaav ho gaya hai",Water Supply
+"Water valve at crossing is jammed and leaking continuously",Water Supply
+"Naali ka paani sadak par bhar gaya hai",Drainage & Sewerage
+"Drain is blocked and overflowing",Drainage & Sewerage
+"Sewage smell and overflow outside the house",Drainage & Sewerage
+"नाली जाम है और पानी सड़क पर फैल रहा है",Drainage & Sewerage
+"The storm drain is full after rainfall",Drainage & Sewerage
+"Gutter blockage near our colony gate",Drainage & Sewerage
+"Severe sewer line backflow during rain",Drainage & Sewerage
+"Manhole cover is broken and raw sewage is spilling",Drainage & Sewerage
+"बरसात का पानी नाली से निकलकर घरों में घुस रहा है",Drainage & Sewerage
+"Gutter ki safai pichle do mahine se nahi hui hai",Drainage & Sewerage
+"Open drainage canal choked with plastic and silt",Drainage & Sewerage
+"Heavy foul odor coming from open drain chamber",Drainage & Sewerage
+"नाली की सफाई न होने से मच्छर और दुर्गंध बढ़ रही है",Drainage & Sewerage
+"Road par bada gaddha hai",Roads & Potholes
+"There is a deep pothole on the main road",Roads & Potholes
+"सड़क टूट गई है और वाहन फिसल रहे हैं",Roads & Potholes
+"Footpath tiles are broken",Roads & Potholes
+"The road surface is damaged near the school",Roads & Potholes
+"Sadak par bahut bade gaddhe hain",Roads & Potholes
+"Deep crater formed after water pipeline digging",Roads & Potholes
+"Bitumen layer washed away creating dangerous uneven surface",Roads & Potholes
+"Two wheelers are slipping due to deep potholes",Roads & Potholes
+"गड्ढों की वजह से मेन रोड पर आए दिन एक्सीडेंट हो रहे हैं",Roads & Potholes
+"Kolar road par sadak poori tarah dhas gayi hai",Roads & Potholes
+"Speed breaker is broken and loose stones cause skidding",Roads & Potholes
+"सड़क का डामर उखड़ गया है तुरंत मरम्मत की आवश्यकता है",Roads & Potholes
+"Trench dug for cable laying was left open without barricade",Roads & Potholes
+"Garbage has not been collected for four days",Waste Management
+"Kachra road ke side par pada hua hai",Waste Management
+"कूड़ेदान भरा हुआ है और कचरा बाहर फैला है",Waste Management
+"Waste is being dumped near the park",Waste Management
+"The municipal garbage truck skipped our street",Waste Management
+"Commercial waste heap attracting stray cattle and dogs",Waste Management
+"Door-to-door sanitation vehicle has stopped coming",Waste Management
+"Colony dustbin overflowing with foul stench",Waste Management
+"कूड़ा उठाने वाली गाड़ी तीन दिन से नहीं आ रही है",Waste Management
+"Plastic waste openly dumped on vacant plot",Waste Management
+"Kachre ka dher laga hua hai aur badboo se rehna mushkil hai",Waste Management
+"Sanitation workers not sweeping the market area",Waste Management
+"सफाई कर्मचारी पिछले एक हफ्ते से कचरा नहीं उठा रहे",Waste Management
+"Street light is not working outside the school",Street Lighting
+"Hamari gali ki light band hai",Street Lighting
+"सड़क पर लगी स्ट्रीट लाइट खराब है",Street Lighting
+"The street lamp has been off for a week",Street Lighting
+"There is no light near the public crossing",Street Lighting
+"Total darkness on the street leading to safety concern for women",Street Lighting
+"Streetlight pole sparking during nighttime",Street Lighting
+"Automatic light sensor faulty keeping lamps off all night",Street Lighting
+"रात में पूरी सड़क पर अंधेरा रहता है असामाजिक तत्वों का डर है",Street Lighting
+"Poles 14 to 18 on main avenue have no glowing bulbs",Street Lighting
+"Gali ke mod par light fuse ho gayi hai",Street Lighting
+"स्ट्रीट लाइट का पोल झुक गया है गिरने का खतरा है",Street Lighting
+"Electric wire hanging loose from overhead municipal pole",Electricity
+"Transformer sparking and frequent voltage drops",Electricity
+"Bijli ka taar sadak par jhul raha hai bada khatra hai",Electricity
+"Voltage fluctuation damaging home appliances across sector",Electricity
+"बिजली का ट्रांसफार्मर खराब हो गया है धुआं निकल रहा है",Electricity
+"Live wire snapped and fallen near the children park",Electricity
+"Power outage across entire ward since afternoon",Electricity
+"बिजली के नंगे तार खंभे से लटक रहे हैं तुरंत ठीक करें",Electricity
+"Public park fence is broken and encroached by vehicles",Public Infrastructure
+"Government school boundary wall collapsed",Public Infrastructure
+"Public toilet near market is locked and unhygienic",Public Infrastructure
+"सामुदायिक पार्क में बेंच और बच्चों के झूले टूटे हुए हैं",Public Infrastructure
+"Encroachment on public pavement blocking pedestrian movement",Public Infrastructure
+"Community hall roof leaking and plaster peeling off",Public Infrastructure
+"सार्वजनिक शौचालय में ताला लगा है और पानी नहीं है",Public Infrastructure

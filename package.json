@@ -1,0 +1,12 @@
+{
+  "name": "jan-sutra-ai",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["apps/web"],
+  "scripts": {
+    "dev": "npm --workspace apps/web run dev",
+    "build": "npm --workspace apps/web run build",
+    "start": "npm --workspace apps/web run start",
+    "lint": "npm --workspace apps/web run lint"
+  }
+}
