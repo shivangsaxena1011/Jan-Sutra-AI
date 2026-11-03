@@ -1,6 +1,8 @@
 import type { Complaint, ComplaintEvent, Incident, Overview, User } from "@/lib/types";
 
-const API_BASE = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1").replace(/\/$/, "");
+const API_BASE = process.env.NEXT_PUBLIC_API_URL
+  ? process.env.NEXT_PUBLIC_API_URL.replace(/\/$/, "")
+  : "/api/v1";
 const TOKEN_KEY = "jansutra_access_token";
 
 export function getToken() {

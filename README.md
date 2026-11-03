@@ -169,18 +169,26 @@ npm run build
 
 ## 🌐 Production Deployment Options
 
-### Option A: Distributed Cloud (Recommended for High Scalability)
-- **Frontend (Next.js)**: Deploy on **Vercel** or **Netlify**
-  - Connect your GitHub repository `shivangsaxena1011/Jan-Sutra-AI`.
-  - Set Root Directory to `apps/web`.
-  - Set Environment Variable: `NEXT_PUBLIC_API_URL=https://your-api-domain.com/api/v1`.
-- **Backend (FastAPI)**: Deploy on **Render**, **Railway**, or **Google Cloud Run**
-  - Set Root Directory to `apps/api`.
-  - Build Command: `pip install -r requirements.txt`.
-  - Start Command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
-  - Set Environment Variables: `ENVIRONMENT=production`, `JWT_SECRET=<32-char-random-secret>`, `CORS_ORIGINS=https://your-frontend.vercel.app`.
+### Option 1: ⚡ 1-Click Vercel Deployment (Zero-Config Standalone Serverless)
+JAN-SUTRA AI features **native serverless route handlers** within Next.js (`apps/web/app/api/v1/[...route]/route.ts`). You can deploy the **entire application solely on Vercel** without spinning up any external database or Python server:
+1. Push your code to your GitHub repository: `https://github.com/shivangsaxena1011/Jan-Sutra-AI`.
+2. Go to [vercel.com](https://vercel.com) and click **"Add New..." ➔ "Project"**.
+3. Import `Jan-Sutra-AI`.
+4. Vercel automatically detects the root `vercel.json` configuration. *(If deploying manually without root preset, set **Root Directory** to `apps/web`)*.
+5. Click **Deploy**.
+6. **Result**: Your live link (e.g. `https://jan-sutra-ai.vercel.app`) works instantly with all 13 interactive views, BhashaBridge AI triage, GIS map, authentication, officer queue, 72h predictive radar, and citizen verification active right out of the box!
 
-### Option B: Single-Host Docker Compose
+### Option 2: Full-Stack Hybrid (Next.js on Vercel + FastAPI on Cloud Run / Railway / Render)
+For municipal high-throughput enterprise deployments with persistent PostgreSQL:
+- **Frontend (Next.js)**: Deploy on **Vercel**
+  - Set Environment Variable: `NEXT_PUBLIC_API_URL=https://your-fastapi-service.up.railway.app/api/v1`
+- **Backend (FastAPI)**: Deploy on **Railway**, **Render**, or **Google Cloud Run**
+  - Root Directory: `apps/api`
+  - Build Command: `pip install -r requirements.txt`
+  - Start Command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+  - Environment Variables: `ENVIRONMENT=production`, `JWT_SECRET=<32-char-random-secret>`, `CORS_ORIGINS=https://your-frontend.vercel.app`
+
+### Option 3: Single-Host Docker Compose
 Run the entire sovereign stack with PostgreSQL in a single command:
 ```bash
 docker compose up --build -d
