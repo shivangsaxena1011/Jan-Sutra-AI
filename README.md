@@ -2,6 +2,8 @@
 ### Sovereign Civic Intelligence & Municipal Operations Matrix
 *Transforming fragmented citizen grievances into unified, verifiable civic resolution.*
 
+[![Live Production Deployment](https://img.shields.io/badge/Live%20Production%20Deployment-jan--sutra--ai.vercel.app-0070F3?style=for-the-badge&logo=vercel&logoColor=white)](https://jan-sutra-ai.vercel.app/)
+
 [![Next.js](https://img.shields.io/badge/Next.js-16.4-black?logo=next.js)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react)](https://react.dev/)
@@ -9,6 +11,9 @@
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.6+-F7931E?logo=scikit-learn)](https://scikit-learn.org/)
 [![Python](https://img.shields.io/badge/Python-3.12%20|%203.14-blue?logo=python)](https://python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> **🌐 Official Live Platform:** [https://jan-sutra-ai.vercel.app/](https://jan-sutra-ai.vercel.app/)  
+> **⚡ Instant Evaluation:** Explore the 72-Hour Predictive Failure Radar, GIS Digital Twin, BhashaBridge Voice Triage, and Public Ward Scorecards directly in production.
 
 ---
 
