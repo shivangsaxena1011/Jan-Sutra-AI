@@ -4,12 +4,14 @@ import { Activity, Shield } from "lucide-react";
 export function Brand({
   compact = false,
   light = false,
+  href = "/",
 }: {
   compact?: boolean;
   light?: boolean;
+  href?: string;
 }) {
   return (
-    <Link href="/" className="group inline-flex items-center gap-3" aria-label="JAN-SUTRA AI home">
+    <Link href={href} className="group inline-flex items-center gap-3" aria-label="JAN-SUTRA AI home">
       <div className="relative">
         <span
           className={`grid size-10 place-items-center rounded-xl transition-transform group-hover:scale-105 ${

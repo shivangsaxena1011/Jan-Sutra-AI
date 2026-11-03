@@ -1,7 +1,17 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { AuthProvider } from "@/components/auth-provider";
 import { ThemeProvider } from "@/components/theme-provider";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8f9fc" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b1326" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "JAN-SUTRA AI | Civic Intelligence & Municipal Sovereign Matrix",

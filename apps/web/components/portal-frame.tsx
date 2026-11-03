@@ -132,6 +132,7 @@ export function PortalFrame({
           <div className="flex items-center justify-between px-1">
             <ThemeToggle compact />
             <button
+              type="button"
               onClick={signOut}
               className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-[var(--text-muted)] transition-colors hover:bg-rose-500/10 hover:text-rose-500"
             >
@@ -147,7 +148,7 @@ export function PortalFrame({
         {/* Top Sovereign Command Bar */}
         <header className="sticky top-0 z-20 flex h-20 items-center justify-between border-b border-[var(--border-subtle)] bg-[var(--bg-surface-glass)] px-5 backdrop-blur-xl md:px-8">
           <div className="flex items-center gap-3 lg:hidden">
-            <Brand compact />
+            <Brand compact href={user.role === "citizen" ? "/citizen" : "/officer"} />
             <span className="font-['Plus_Jakarta_Sans',sans-serif] text-sm font-extrabold tracking-wide">
               JAN-SUTRA
             </span>
@@ -197,6 +198,8 @@ export function PortalFrame({
             <div className="hidden sm:flex items-center gap-1 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface-subtle)] px-2.5 py-1">
               <Globe2 size={14} className="text-[var(--text-muted)]" />
               <select
+                id="portal-language"
+                name="portal-language"
                 aria-label="Select portal language"
                 value={lang}
                 onChange={(e) => setLang(e.target.value)}
@@ -219,6 +222,7 @@ export function PortalFrame({
 
             {/* Notifications Alert */}
             <button
+              type="button"
               aria-label="View civic alerts and notifications"
               className="relative grid size-9 place-items-center rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface-elevated)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[var(--border-strong)] transition-colors"
               title="Civic telemetry notifications"
@@ -267,6 +271,7 @@ export function PortalFrame({
               </Link>
             ))}
             <button
+              type="button"
               onClick={signOut}
               className="flex min-w-14 flex-col items-center gap-1 rounded-xl px-2 py-1.5 text-[9px] font-bold text-rose-500/70 hover:text-rose-500"
             >

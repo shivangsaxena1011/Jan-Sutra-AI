@@ -103,6 +103,12 @@ export default function RadarPage() {
   const [selectedId, setSelectedId] = useState<string>("RAD-2026-081");
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const [radarTimeframe, setRadarTimeframe] = useState<string>("72h");
+  const [toast, setToast] = useState<string | null>(null);
+
+  const showToast = (msg: string) => {
+    setToast(msg);
+    setTimeout(() => setToast(null), 3500);
+  };
 
   const selected = hotspots.find((h) => h.id === selectedId) || hotspots[0];
 
@@ -156,7 +162,7 @@ export default function RadarPage() {
                 ))}
               </div>
               <button
-                onClick={() => alert("Simulated: Pre-emptive work order WO-PRE-412 dispatched to Ward 12 Water Division.")}
+                onClick={() => showToast("Pre-emptive work order WO-PRE-412 dispatched to Ward 12 Water Division.")}
                 className="btn-primary !px-4 !py-2.5 !text-xs"
               >
                 <Zap size={14} /> Authorize Rapid Pre-emption
@@ -438,13 +444,20 @@ export default function RadarPage() {
                 </p>
                 <div className="mt-4 flex gap-2">
                   <button
-                    onClick={() => alert(`Pre-emptive dispatched for ${selected.ward} successfully!`)}
+                    onClick={() => showToast(`Pre-emptive dispatched for ${selected.ward} successfully!`)}
                     className="btn-primary !w-full !py-2.5 !text-xs"
                   >
                     Dispatch Action Order
                   </button>
                 </div>
               </div>
+
+              {toast && (
+                <div role="status" className="fixed bottom-24 right-6 z-50 flex items-center gap-2 rounded-xl border border-emerald-500/40 bg-emerald-500 text-slate-950 px-4 py-3 font-semibold text-xs shadow-2xl animate-in fade-in slide-in-from-bottom-2 duration-300">
+                  <CheckCircle2 size={16} />
+                  <span>{toast}</span>
+                </div>
+              )}
 
               {/* Monsoon & Flood Vulnerability Index */}
               <div className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface-subtle)] p-4">

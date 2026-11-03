@@ -322,6 +322,8 @@ export default function SubmitPage() {
                       <div className="relative">
                         <MapPin size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)]" />
                         <input
+                          id="address"
+                          name="address"
                           required
                           value={address}
                           onChange={(e) => setAddress(e.target.value)}
@@ -332,10 +334,12 @@ export default function SubmitPage() {
                     </div>
 
                     <div>
-                      <label className="block text-[10px] font-bold uppercase text-[var(--text-muted)] mb-1">
+                      <label htmlFor="ward" className="block text-[10px] font-bold uppercase text-[var(--text-muted)] mb-1">
                         Ward Jurisdiction
                       </label>
                       <select
+                        id="ward"
+                        name="ward"
                         value={ward}
                         onChange={(e) => setWard(e.target.value)}
                         className="field text-xs font-mono"
@@ -436,6 +440,8 @@ export default function SubmitPage() {
                   </button>
 
                   <input
+                    id="draft"
+                    name="draft"
                     type="text"
                     value={draft}
                     onChange={(e) => setDraft(e.target.value)}

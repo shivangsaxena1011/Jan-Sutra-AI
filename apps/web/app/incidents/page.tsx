@@ -45,6 +45,12 @@ export default function IncidentsPage() {
   const [activeLayer, setActiveLayer] = useState<string>("all");
   const [selectedNode, setSelectedNode] = useState(spatialNodes[0]);
   const [search, setSearch] = useState("");
+  const [toast, setToast] = useState<string | null>(null);
+
+  const showToast = (msg: string) => {
+    setToast(msg);
+    setTimeout(() => setToast(null), 3500);
+  };
 
   async function refresh() {
     setLoading(true);
@@ -242,12 +248,19 @@ export default function IncidentsPage() {
 
               <div className="pt-2">
                 <button
-                  onClick={() => alert(`Master Incident Action dispatched for ${selectedNode.ward}!`)}
+                  onClick={() => showToast(`Master Incident Action dispatched for ${selectedNode.ward}!`)}
                   className="btn-primary !w-full !py-3 !text-xs"
                 >
                   <Zap size={14} /> Dispatch Rapid Intervention Unit
                 </button>
               </div>
+
+              {toast && (
+                <div role="status" className="fixed bottom-24 right-6 z-50 flex items-center gap-2 rounded-xl border border-emerald-500/40 bg-emerald-500 text-slate-950 px-4 py-3 font-semibold text-xs shadow-2xl animate-in fade-in slide-in-from-bottom-2 duration-300">
+                  <CheckCircle2 size={16} />
+                  <span>{toast}</span>
+                </div>
+              )}
             </div>
           </section>
 

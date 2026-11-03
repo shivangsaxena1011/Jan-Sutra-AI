@@ -26,9 +26,7 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
 
-  useEffect(() => {
-    if (!loading && user) router.replace(user.role === "citizen" ? "/citizen" : "/officer");
-  }, [loading, user, router]);
+  // Allow viewing /login even when logged in so users can freely switch roles via Quick Demo Switcher
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -125,6 +123,8 @@ export default function LoginPage() {
               </label>
               <input
                 id="email"
+                name="email"
+                autoComplete="email"
                 type="email"
                 required
                 value={email}
@@ -141,6 +141,8 @@ export default function LoginPage() {
               <div className="relative">
                 <input
                   id="password"
+                  name="password"
+                  autoComplete="current-password"
                   type={showPassword ? "text" : "password"}
                   required
                   value={password}

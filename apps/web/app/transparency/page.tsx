@@ -119,6 +119,12 @@ const wardData: WardScore[] = [
 export default function TransparencyPage() {
   const [search, setSearch] = useState("");
   const [zoneFilter, setZoneFilter] = useState("all");
+  const [toast, setToast] = useState<string | null>(null);
+
+  const showToast = (msg: string) => {
+    setToast(msg);
+    setTimeout(() => setToast(null), 3500);
+  };
 
   const filtered = wardData.filter((item) => {
     const matchesSearch =
@@ -156,12 +162,19 @@ export default function TransparencyPage() {
 
             <div className="flex items-center gap-3">
               <button
-                onClick={() => alert("Downloaded NIC-Verified Sovereign Ward Scorecard PDF.")}
+                onClick={() => showToast("Exported NIC-Verified Sovereign Ward Scorecard dataset (CSV).")}
                 className="btn-secondary !px-4 !py-2.5 !text-xs font-mono"
               >
                 <Download size={14} /> Export Ward Audit CSV
               </button>
             </div>
+
+            {toast && (
+              <div role="status" className="fixed bottom-24 right-6 z-50 flex items-center gap-2 rounded-xl border border-emerald-500/40 bg-emerald-500 text-slate-950 px-4 py-3 font-semibold text-xs shadow-2xl animate-in fade-in slide-in-from-bottom-2 duration-300">
+                <CheckCircle2 size={16} />
+                <span>{toast}</span>
+              </div>
+            )}
           </div>
         </section>
 

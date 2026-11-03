@@ -242,8 +242,28 @@ function classifyComplaint(text: string) {
 
 function getUserFromToken(req: NextRequest): User | null {
   const authHeader = req.headers.get("authorization");
-  if (!authHeader) return users[0]; // Default demo fallback
-  return users[0];
+  if (!authHeader) return null;
+  const token = authHeader.replace(/^Bearer\s+/i, "");
+  if (!token) return null;
+  if (token.startsWith("jwt_token_")) {
+    try {
+      const email = Buffer.from(token.replace("jwt_token_", ""), "base64").toString("utf-8");
+      const found = users.find((u) => u.email.toLowerCase() === email.toLowerCase());
+      if (found) return found;
+      const isOfficer = email.toLowerCase().includes("officer") || email.toLowerCase().includes("admin");
+      return {
+        id: isOfficer ? 2 : 1,
+        name: isOfficer ? "Er. Rakesh Sharma" : "Aarav Sharma",
+        email,
+        role: isOfficer ? "officer" : "citizen",
+        preferred_language: "hi",
+        ward: "Ward 12",
+      };
+    } catch {
+      return null;
+    }
+  }
+  return null;
 }
 
 export async function GET(
@@ -262,7 +282,10 @@ export async function GET(
   }
 
   if (path === "auth/me") {
-    const user = getUserFromToken(req) || users[0];
+    const user = getUserFromToken(req);
+    if (!user) {
+      return NextResponse.json({ detail: "Not authenticated" }, { status: 401 });
+    }
     return NextResponse.json(user);
   }
 

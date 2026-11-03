@@ -90,6 +90,8 @@ export default function RegisterPage() {
               </label>
               <input
                 id="name"
+                name="name"
+                autoComplete="name"
                 className="field text-xs"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -105,6 +107,8 @@ export default function RegisterPage() {
               </label>
               <input
                 id="email"
+                name="email"
+                autoComplete="email"
                 className="field text-xs"
                 type="email"
                 value={email}
@@ -120,6 +124,8 @@ export default function RegisterPage() {
               </label>
               <input
                 id="password"
+                name="password"
+                autoComplete="new-password"
                 className="field text-xs"
                 type="password"
                 value={password}
