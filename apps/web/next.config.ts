@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // When deploying on Vercel, use native serverless output; use standalone for Docker containers.
+  ...(process.env.VERCEL ? {} : { output: "standalone" }),
   poweredByHeader: false,
   reactStrictMode: true,
   async headers() {
