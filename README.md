@@ -24,9 +24,8 @@
 5. [Data Model & REST API Reference](#data-model--rest-api-reference)
 6. [Technology Stack](#technology-stack)
 7. [Repository Structure](#repository-structure)
-8. [Running Locally](#running-locally)
-9. [Demo Accounts & Testing](#demo-accounts--testing)
-10. [Deployment & Documentation](#deployment--documentation)
+8. [Demo Accounts](#demo-accounts)
+9. [Deployment & Documentation](#deployment--documentation)
 
 ---
 
@@ -188,59 +187,7 @@ Jan-Sutra-AI/
 
 ---
 
-## Running Locally
-
-### Prerequisites
-- **Node.js** v20.9+ (v22 LTS recommended)
-- **Python** 3.12+
-- **Docker** *(optional, for containerized full-stack execution)*
-
-### Option A: Local Development (FastAPI + Next.js)
-
-From the project root directory, start the **FastAPI backend**:
-
-```bash
-cd apps/api
-python -m venv .venv
-
-# Windows (PowerShell):
-.\.venv\Scripts\Activate.ps1
-# Linux / macOS:
-source .venv/bin/activate
-
-pip install -r requirements.txt
-python -m scripts.seed_demo
-python -m uvicorn app.main:app --reload --port 8000
-```
-
-- Swagger UI: `http://localhost:8000/docs`
-- Health Check: `http://localhost:8000/health`
-
-In a separate terminal at the project root, start the **Next.js frontend**:
-
-```bash
-npm install
-npm --workspace apps/web run dev
-```
-
-- Web Portal: `http://localhost:3000`
-- *(Optional)* Set `NEXT_PUBLIC_API_URL=http://localhost:8000/api/v1` in `apps/web/.env.local` to point the frontend to FastAPI instead of the built-in Next.js serverless API routes.
-
-### Option B: Docker Compose (PostgreSQL + FastAPI + Next.js)
-
-Run the entire stack with a single command from the project root:
-
-```bash
-docker compose up --build -d
-```
-
-- Web Application: `http://localhost:3000`
-- FastAPI Backend: `http://localhost:8000`
-- PostgreSQL: `localhost:5432`
-
----
-
-## Demo Accounts & Testing
+## Demo Accounts
 
 ### Pre-Seeded Demonstration Credentials
 
@@ -249,23 +196,6 @@ docker compose up --build -d
 | **Citizen** | `citizen@jansutra.in` | `Citizen@123` | Citizen Hub, BhashaBridge Intake, Case Verification |
 | **Officer** | `officer@jansutra.in` | `Officer@123` | Operations Queue, Master Incidents, Status Updates |
 | **Administrator** | `admin@jansutra.in` | `Admin@123` | Full Municipal Oversight, Incident Register, Analytics |
-
-> Staff accounts can also be provisioned securely via CLI:  
-> `python -m scripts.create_staff --name "Officer Name" --email name@agency.gov.in --role officer --ward "Ward 12"`
-
-### Verification & Training Commands
-
-```bash
-# Backend unit & lifecycle tests
-cd apps/api && pytest
-
-# Retrain optional TF-IDF grievance classifier
-cd apps/api && python training/train_classifier.py --input training/data/grievances.csv
-
-# Frontend production build & lint check
-npm run build
-npm run lint
-```
 
 ---
 
