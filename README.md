@@ -1,218 +1,280 @@
 # JAN-SUTRA AI
-### Sovereign Civic Intelligence & Municipal Operations Matrix
-*Transforming fragmented citizen grievances into unified, verifiable civic resolution.*
 
-[![Live Production Deployment](https://img.shields.io/badge/Live%20Production%20Deployment-jan--sutra--ai.vercel.app-0070F3?style=for-the-badge&logo=vercel&logoColor=white)](https://jan-sutra-ai.vercel.app/)
+**Multilingual Civic Grievance Intelligence, Master Incident Linking & Citizen-Verified Municipal Operations Platform**
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.4-black?logo=next.js)](https://nextjs.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.3-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.6+-F7931E?logo=scikit-learn)](https://scikit-learn.org/)
-[![Python](https://img.shields.io/badge/Python-3.12%20|%203.14-blue?logo=python)](https://python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Live Deployment](https://img.shields.io/badge/Live%20Platform-jan--sutra--ai.vercel.app-0070F3?style=for-the-badge&logo=vercel&logoColor=white)](https://jan-sutra-ai.vercel.app/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.3-black?logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.3-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.162-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)](https://python.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.6%2B-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 
-> **🌐 Official Live Platform:** [https://jan-sutra-ai.vercel.app/](https://jan-sutra-ai.vercel.app/)  
-> **⚡ Instant Evaluation:** Explore the 72-Hour Predictive Failure Radar, GIS Digital Twin, BhashaBridge Voice Triage, and Public Ward Scorecards directly in production.
+> **Live Application:** [https://jan-sutra-ai.vercel.app/](https://jan-sutra-ai.vercel.app/)  
+> **Repository:** [https://github.com/shivangsaxena1011/Jan-Sutra-AI](https://github.com/shivangsaxena1011/Jan-Sutra-AI)
 
 ---
 
-## 🏛️ Executive Summary & Real-World Impact
+## Table of Contents
 
-In municipal governance across India, citizen grievance systems suffer from three systemic points of failure:
-1. **The Triage Chokepoint & Linguistic Friction**: Citizens speak casually in conversational Hinglish or regional Indic dialects (e.g. *"Naali ka paani sadak par aa raha hai"*). Traditional departmental drop-down menus force citizens to guess jurisdictional boundaries they do not understand, resulting in over 38% misrouted complaints.
-2. **The Redundancy Avalanche**: A single major water pipeline fissure or road cave-in triggers dozens of duplicate grievance tickets from the same lane. Municipal engineers spend critical hours triaging identical reports rather than dispatching repair crews.
-3. **The Verification Void**: Departments routinely mark grievances "Resolved" on internal spreadsheets without empirical proof, leading to widespread public distrust and unresolved recurring failures.
-
-**JAN-SUTRA AI** is an enterprise-grade civic intelligence platform engineered for Municipal Corporations (demonstrated across the **Bhopal Municipal Corporation - BMC Ward 12–18 corridor**). It introduces an explainable, closed-loop civic architecture:
-
-```
-┌─────────────────────────┐      ┌─────────────────────────┐      ┌─────────────────────────┐
-│   BhashaBridge Voice    │ ───► │  Incident Fusion Twin   │ ───► │   Proof of Resolution   │
-│ Multilingual Triage ASR │      │  Spatial Deduplication  │      │ Before/After Photo OTP  │
-└─────────────────────────┘      └─────────────────────────┘      └─────────────────────────┘
-             │                                │                                │
-             ▼                                ▼                                ▼
-┌─────────────────────────┐      ┌─────────────────────────┐      ┌─────────────────────────┐
-│  CivicPulse 72h Radar   │      │   AI/ML Architecture    │      │  Ward Health Scores     │
-│ Predictive Failure Risk │      │ Observability Telemetry │      │ Public Transparency     │
-└─────────────────────────┘      └─────────────────────────┘      └─────────────────────────┘
-```
+1. [Project Foundation & Problem Statement](#project-foundation--problem-statement)
+2. [System Architecture](#system-architecture)
+3. [Core Capabilities & Portal Routes](#core-capabilities--portal-routes)
+4. [Civic Intelligence & ML Pipeline](#civic-intelligence--ml-pipeline)
+5. [Data Model & REST API Reference](#data-model--rest-api-reference)
+6. [Technology Stack](#technology-stack)
+7. [Repository Structure](#repository-structure)
+8. [Running Locally](#running-locally)
+9. [Demo Accounts & Testing](#demo-accounts--testing)
+10. [Deployment & Documentation](#deployment--documentation)
 
 ---
 
-## 🌟 Sovereign Architectural Pillars
+## Project Foundation & Problem Statement
 
-### 1. BhashaBridge: Conversational Multilingual Speech Triage
-- **Natural Indic Parsing**: Accepts unstructured citizen voice notes and text in **Hinglish**, **Hindi**, and **English**.
-- **Acoustic & Semantic Telemetry**: Simulates sub-150ms acoustic tokenization paired with an explainable hybrid intelligence classifier (`IndicBERT-L2` + TF-IDF character n-gram ensemble).
-- **Zero Municipal Friction**: Citizens never select a department; the pipeline classifies severity (P1–P3), extracts topological landmarks, and suggests the exact responsible municipal wing with confidence scoring.
+**JAN-SUTRA AI** is a full-stack civic-tech prototype designed to modernize municipal grievance redressal across Indian urban local bodies (demonstrated using **Bhopal Municipal Corporation — Ward 12 / Arera Colony** scenarios).
 
-### 2. Incident Fusion & Civic Digital Twin
-- **-90.5% Redundancy Yield**: Groups individual citizen complaints into unified **Master Incidents** using category, ward boundaries, and spatial topological clustering.
-- **Interactive Spatial GIS Map**: Visualizes real-time infrastructure stress nodes (Water, Drainage, Roads, Streetlighting) with live telemetry alerts and ward-level jurisdiction tracking.
-- **Citizen Integrity**: Every constituent retains an independent reference ticket code (e.g. `JS-261102-164F54`), receiving automated progress notifications as the master incident advances.
+Traditional municipal grievance portals break down across three operational bottlenecks:
 
-### 3. CivicPulse 72-Hour Predictive Failure Radar
-- **Proactive Maintenance**: Merges historical recurrence frequencies, pipeline age data, and monsoon water level telemetry to forecast infrastructure breakdowns before citizen outages occur.
-- **Vulnerability Indices**: Provides a 72-hour risk horizon across city wards, highlighting high-risk clusters with automated pre-emptive work order dispatch.
-
-### 4. Proof of Resolution Intelligence (PoRI)
-- **Empirical Visual Audit**: Dual Before/After photographic comparison inspector comparing reported physical defects against field repair work orders.
-- **Sovereign Ledger Stamp**: Embeds simulated cryptographic SHA-256 integrity hashes and satellite geotag coordinates (`23.2156° N, 77.4305° E`).
-- **Citizen-Certified Closure**: Under the JAN-SUTRA charter, no ticket can be closed unilaterally by a contractor; the citizen must confirm, dispute, or partially accept the resolution.
-
-### 5. Public Transparency Portal & Ward Health Scorecards
-- **Citywide Accountability Leaderboard**: Ranks all municipal wards on composite health scores, average MTTR (Mean Time to Resolution), and dispute redress rates.
-- **Resolution Authenticity Distribution**: Publicly audits the split between Flawless Closures (72%), Reworked Interventions (19%), and Disputed Claims (9%).
-
----
-
-## 🛠️ Technology Stack
-
-| Domain | Technology | Purpose |
+| Challenge | Root Cause | JAN-SUTRA AI Approach |
 |---|---|---|
-| **Frontend Framework** | **Next.js 16.4 (App Router, Turbopack)** | Server-rendered high-performance civic dashboard |
-| **UI Library** | **React 19.2** | Concurrent rendering and fluid reactive transitions |
-| **Styling & Design System** | **Tailwind CSS 4.3** | Sovereign dark matrix (`#0b1326`) and civic light theme |
-| **Theme System** | **Custom ThemeProvider + CSS Variables** | Smooth instant toggle, persistent preference, zero-flicker |
-| **Icons & Visualization** | **Lucide React + Vector SVG Canvas** | High-density telemetry icons and GIS vector rendering |
-| **Backend API** | **Python FastAPI 0.115+** | High-throughput async REST API with OpenAPI specification |
-| **Database & ORM** | **SQLite (Dev) / PostgreSQL (Prod) + SQLAlchemy 2** | Relational grievance and cryptographic event ledger |
-| **Machine Learning** | **scikit-learn (TF-IDF + Logistic Regression / Joblib)** | Multilingual intent and grievance category classification |
-| **Security & Auth** | **Argon2 Password Hashing + Signed Expiring JWTs** | Role-Based Access Control (RBAC) across Citizen/Officer/Admin |
+| **Triage & Linguistic Friction** | Citizens describe issues naturally in Hindi, English, or Hinglish (e.g., *"Naali ka paani sadak par aa raha hai"*), but legacy forms force manual department selection. | **BhashaBridge Intake**: Detects language (`hi` / `hinglish` / `en`), classifies the civic domain, assigns priority (`P1`–`P3`), and suggests the responsible department with an explainable routing reason. |
+| **Duplicate Complaint Overload** | Multiple residents report the same burst water line or road failure, creating isolated tickets for one underlying fault. | **Master Incident Linking**: Groups related open complaints sharing the same category and ward within a 14-day window under a unified Master Incident while preserving each citizen's individual tracking code. |
+| **Unverified Closures** | Tickets can be marked resolved internally without citizen confirmation, eroding public accountability. | **Citizen-Certified Closure**: Officers can transition cases up to `resolved`, but final `closed` status is controlled exclusively by the citizen verification workflow (`confirmed`, `disputed`, or `partial`). |
 
 ---
 
-## 🚀 Quick Start Guide
+## System Architecture
 
-### 1. Prerequisites
-- **Node.js**: v20.9+ (Node 22 LTS recommended)
-- **Python**: 3.12 or 3.14
-- **Git**
+JAN-SUTRA AI supports two runtime modes using a shared API contract (`/api/v1`):
 
-### 2. Clone the Repository
-```bash
-git clone https://github.com/shivangsaxena1011/Jan-Sutra-AI.git
-cd Jan-Sutra-AI
+1. **Full-Stack Hybrid Mode (FastAPI + SQLAlchemy + PostgreSQL/SQLite):** Persistent relational storage, Argon2 password hashing, HS256 JWT authentication, role-based access control, and optional scikit-learn model inference.
+2. **Standalone Serverless Mode (Next.js App Router):** Built-in serverless route handler (`apps/web/app/api/v1/[...route]/route.ts`) backed by an in-memory demonstration store for zero-config evaluation on Vercel.
+
+```mermaid
+flowchart LR
+  C[Citizen Portal] --> W[Next.js 16 Frontend]
+  O[Officer / Admin Workspace] --> W
+  W -->|Bearer JWT / JSON| API[FastAPI REST API or Next.js Serverless API]
+  API --> NLP[Explainable Civic Classifier + Optional TF-IDF Model]
+  NLP --> LINK[Master Incident Linker]
+  API --> DB[(SQLite / PostgreSQL)]
+  LINK --> DB
+  O -->|Status Transitions| API
+  C -->|Confirm / Dispute / Partial| API
 ```
 
-### 3. Start the Backend API (FastAPI)
-```bash
-# Navigate to the API application
-cd apps/api
+### Complaint Lifecycle & Governance Rule
 
-# Create and activate Python virtual environment
+```mermaid
+stateDiagram-v2
+  [*] --> submitted
+  submitted --> acknowledged
+  acknowledged --> investigating
+  investigating --> in_progress
+  in_progress --> resolved
+  resolved --> closed: Citizen confirms
+  resolved --> reopened: Citizen disputes
+  resolved --> in_progress: Partial resolution
+  reopened --> investigating
+```
+
+> Officers and administrators cannot directly close a complaint; closure requires citizen verification via `POST /api/v1/complaints/{id}/verify`. Staff may mark invalid submissions as `rejected` with an auditable note.
+
+---
+
+## Core Capabilities & Portal Routes
+
+| Route | Portal / Module | Functionality |
+|---|---|---|
+| `/` | **Landing Page** | Overview of platform architecture, capabilities, theme toggle (dark/light), and portal entry points. |
+| `/login`, `/register` | **Authentication & Onboarding** | Role-based sign-in (with one-click demo credential switching) and citizen self-registration. |
+| `/citizen` | **Citizen Hub** | Personal grievance metrics, active ticket tracking, and pending resolution verification prompts. |
+| `/submit` | **BhashaBridge Intake** | Guided conversational grievance submission supporting Hindi, Hinglish, and English with live triage suggestions. |
+| `/complaints/[id]` | **Case History & Verification** | Full chronological audit trail (`ComplaintEvent` timeline), resolution evidence view, and citizen confirm/dispute actions. |
+| `/officer` | **Officer Operations Queue** | Filterable departmental queue for advancing ticket statuses (`acknowledged` → `investigating` → `in_progress` → `resolved`). |
+| `/incidents` | **Master Incidents & Digital Twin** | Aggregated `INC-*` register linked to individual `JS-*` complaints alongside a ward spatial node visualizer. |
+| `/radar` | **CivicPulse 72h Radar** | Interactive UI demonstration of predictive infrastructure risk hotspots and pre-emptive dispatch workflows. |
+| `/model-lab` | **AI/ML Observability Lab** | Telemetry dashboard showcasing model architecture concepts and pipeline inspection UI. |
+| `/transparency` | **Ward Health Scorecards** | Public accountability leaderboard displaying ward resolution metrics and closure authenticity distributions. |
+
+> **Scope Note:** The authentication, triage, complaint lifecycle, incident linking, analytics overview, and citizen verification workflows are backed by live REST endpoints. Spatial GIS layers, `/radar` forecasts, and `/model-lab` telemetry are prototype UI visualizations (see [docs/validation-and-scope.md](docs/validation-and-scope.md)).
+
+---
+
+## Civic Intelligence & ML Pipeline
+
+The backend triage engine (`apps/api/app/services/intelligence.py`) prioritizes **explainability** over opaque black-box routing:
+
+1. **Language Detection:** Identifies Devanagari Unicode script (`hi`), Romanized Hindi/Hinglish keywords (`hinglish`), or defaults to English (`en`).
+2. **Rule-Based Classification:** Matches input against curated civic vocabularies across **7 core categories** (*Water Supply*, *Drainage & Sewerage*, *Roads & Potholes*, *Waste Management*, *Street Lighting*, *Electricity*, *Public Infrastructure*) with a *General Civic Issue / Municipal Helpdesk* fallback when confidence is low.
+3. **Optional ML Fallback (`scikit-learn`):** When keyword rules yield zero matches, the pipeline consults `artifacts/grievance_classifier.joblib` — a `TfidfVectorizer(analyzer="char_wb", ngram_range=(2, 5))` + balanced `LogisticRegression` classifier trained via `apps/api/training/train_classifier.py`.
+4. **Priority Scoring:** Assigns `P1` (urgent safety/hospital/school/flood/electrocution signals), `P2` (matched civic category), or `P3` (unclassified general triage).
+5. **Master Incident Clustering:** Links new reports to the most recent open/investigating/in-progress incident matching the same `category` and `ward` created within the last 14 days, or opens a new `INC-*` record.
+
+---
+
+## Data Model & REST API Reference
+
+### Database Entities (`apps/api/app/models/entities.py`)
+- **`User`**: Citizen, officer, and administrator accounts with Argon2 password hashes, ward assignment, and preferred language.
+- **`Department`**: Municipal wings (`WATER`, `DRAIN`, `ROADS`, `WASTE`, `LIGHT`, `HELP`) with default SLA hours.
+- **`CivicAsset`**: Geo-tagged municipal infrastructure records (`asset_code`, `ward`, `latitude`, `longitude`).
+- **`Incident` (`master_incidents`)**: Clustered `INC-*` parent incidents tracking `linked_complaints` and overall status.
+- **`Complaint`**: Individual citizen `JS-*` tickets with `confidence`, `routing_reason`, `citizen_verification`, and `resolution_note`.
+- **`ComplaintEvent`**: Immutable audit log of status changes, submissions, and citizen verification actions.
+
+### Core API Endpoints (`/api/v1`)
+
+| Method | Endpoint | Access | Description |
+|---|---|---|---|
+| `GET` | `/health` | Public | Service health and active environment status. |
+| `POST` | `/api/v1/auth/register` | Public | Register a new citizen account and issue JWT. |
+| `POST` | `/api/v1/auth/login` | Public | Authenticate user and return Bearer token. |
+| `GET` | `/api/v1/auth/me` | Authenticated | Return current authenticated user profile. |
+| `GET` | `/api/v1/departments` | Authenticated | List configured municipal departments and SLAs. |
+| `POST` | `/api/v1/assistant/triage` | Optional Auth | Analyze complaint text and return category, priority, and localized reply. |
+| `POST` | `/api/v1/complaints` | Authenticated | Submit complaint, classify, and link/create Master Incident. |
+| `GET` | `/api/v1/complaints` | Authenticated | List complaints (scoped to owner for citizens; all for staff). |
+| `GET` | `/api/v1/complaints/{id}` | Authenticated | Fetch single complaint details and full `ComplaintEvent` timeline. |
+| `PATCH` | `/api/v1/complaints/{id}/status` | Officer / Admin | Transition complaint status and record resolution notes. |
+| `POST` | `/api/v1/complaints/{id}/verify` | Authenticated | Citizen confirmation (`confirmed`), dispute (`disputed`), or partial fix. |
+| `GET` | `/api/v1/incidents` | Officer / Admin | List Master Incidents and linked complaint counts. |
+| `GET` | `/api/v1/analytics/overview` | Authenticated | Role-scoped summary metrics and resolution rates. |
+
+---
+
+## Technology Stack
+
+| Layer | Technologies |
+|---|---|
+| **Frontend** | Next.js 16.3 (App Router), React 19.2, TypeScript 5.8, Tailwind CSS 4.3, Lucide React |
+| **Backend API** | Python 3.12+, FastAPI 0.162, Uvicorn, Pydantic Settings |
+| **Database & ORM** | SQLAlchemy 2.0+, PostgreSQL (`psycopg 3`) for production/Docker, SQLite for local development |
+| **ML & NLP** | scikit-learn 1.6+ (TF-IDF character n-grams + Logistic Regression), Joblib, Pandas |
+| **Security** | Argon2 (`argon2-cffi`), HS256 JWT (`PyJWT`), strict CORS & security headers (`nosniff`, `X-Frame-Options: DENY`) |
+| **Infrastructure** | Docker & Docker Compose, Vercel (`vercel.json` root monorepo build) |
+
+---
+
+## Repository Structure
+
+```text
+Jan-Sutra-AI/
+├── apps/
+│   ├── api/                        # FastAPI backend & ML pipeline
+│   │   ├── app/
+│   │   │   ├── api/                # Route handlers & RBAC dependencies
+│   │   │   ├── core/               # Config, DB session, Argon2/JWT security
+│   │   │   ├── models/             # SQLAlchemy ORM entities
+│   │   │   ├── schemas/            # Pydantic request/response schemas
+│   │   │   └── services/           # Explainable classifier & ML loader
+│   │   ├── artifacts/              # Trained joblib classifier artifact
+│   │   ├── scripts/                # seed_demo.py & create_staff.py
+│   │   ├── tests/                  # pytest API & intelligence test suites
+│   │   └── training/               # Starter CSV & train_classifier.py
+│   └── web/                        # Next.js 16 frontend & serverless API
+│       ├── app/                    # App Router pages & /api/v1 route handler
+│       ├── components/             # Shared UI frame, auth, theme, badges
+│       └── lib/                    # Typed API client & domain types
+├── docs/
+│   ├── architecture.md             # System boundaries & evolution roadmap
+│   ├── model-card.md               # Classifier limitations & evaluation criteria
+│   └── validation-and-scope.md     # Verified checks & release boundaries
+├── docker-compose.yml              # Full PostgreSQL + FastAPI + Next.js stack
+├── package.json                    # Root npm workspace configuration
+└── vercel.json                     # Vercel monorepo deployment config
+```
+
+---
+
+## Running Locally
+
+### Prerequisites
+- **Node.js** v20.9+ (v22 LTS recommended)
+- **Python** 3.12+
+- **Docker** *(optional, for containerized full-stack execution)*
+
+### Option A: Local Development (FastAPI + Next.js)
+
+From the project root directory, start the **FastAPI backend**:
+
+```bash
+cd apps/api
 python -m venv .venv
+
 # Windows (PowerShell):
 .\.venv\Scripts\Activate.ps1
 # Linux / macOS:
 source .venv/bin/activate
 
-# Install dependencies
 pip install -r requirements.txt
-
-# Seed the database with Bhopal Ward 12 demonstration records
 python -m scripts.seed_demo
-
-# Start the API server
 python -m uvicorn app.main:app --reload --port 8000
 ```
-*API interactive Swagger docs will be available at:* `http://localhost:8000/docs`  
-*API health check:* `http://localhost:8000/health`
 
-### 4. Start the Frontend (Next.js)
-Open a new terminal in the project root:
+- Swagger UI: `http://localhost:8000/docs`
+- Health Check: `http://localhost:8000/health`
+
+In a separate terminal at the project root, start the **Next.js frontend**:
+
 ```bash
-# Install workspace dependencies
 npm install
-
-# Start Next.js development server
 npm --workspace apps/web run dev
 ```
-*Open your browser and navigate to:* **`http://localhost:3000`**
 
----
+- Web Portal: `http://localhost:3000`
+- *(Optional)* Set `NEXT_PUBLIC_API_URL=http://localhost:8000/api/v1` in `apps/web/.env.local` to point the frontend to FastAPI instead of the built-in Next.js serverless API routes.
 
-## 🔑 Pre-Configured Demo Credentials
+### Option B: Docker Compose (PostgreSQL + FastAPI + Next.js)
 
-The platform includes role-based demonstration accounts with pre-loaded civic cases:
+Run the entire stack with a single command from the project root:
 
-| Portal Role | Email Address | Password | Accessible Views |
-|---|---|---|---|
-| **Citizen** | `citizen@jansutra.in` | `Citizen@123` | Citizen Hub, BhashaBridge Triage, Verification Check |
-| **Officer** | `officer@jansutra.in` | `Officer@123` | Operations Queue, Digital Twin Fusion, Field Dispatch |
-| **Administrator** | `admin@jansutra.in` | `Admin@123` | Complete Municipal Oversight, Model Lab, Ward Audit |
-
-*(These accounts can also be selected with a single click using the Quick-Switch buttons on the `/login` screen).*
-
----
-
-## 🧪 Testing & Model Evaluation
-
-### Running Backend Unit & Integration Tests
-```bash
-cd apps/api
-pytest
-```
-*Executes API contract tests and intelligence pipeline verification.*
-
-### Retraining the Multilingual Classifier
-```bash
-cd apps/api
-python training/train_classifier.py --input training/data/grievances.csv
-```
-*Generates and validates `artifacts/grievance_classifier.joblib` across Hindi, Hinglish, and English civic corpora.*
-
-### Verifying Frontend Build & Static Generation
-```bash
-npm run build
-```
-*Compiles all 13 application routes with Turbopack and verifies strict TypeScript compliance.*
-
----
-
-## 🌐 Production Deployment Options
-
-### Option 1: ⚡ 1-Click Vercel Deployment (Zero-Config Standalone Serverless)
-JAN-SUTRA AI features **native serverless route handlers** within Next.js (`apps/web/app/api/v1/[...route]/route.ts`). You can deploy the **entire application solely on Vercel** without spinning up any external database or Python server:
-1. Push your code to your GitHub repository: `https://github.com/shivangsaxena1011/Jan-Sutra-AI`.
-2. Go to [vercel.com](https://vercel.com) and click **"Add New..." ➔ "Project"**.
-3. Import `Jan-Sutra-AI`.
-4. Vercel automatically detects the root `vercel.json` configuration. *(If deploying manually without root preset, set **Root Directory** to `apps/web`)*.
-5. Click **Deploy**.
-6. **Result**: Your live link (e.g. `https://jan-sutra-ai.vercel.app`) works instantly with all 13 interactive views, BhashaBridge AI triage, GIS map, authentication, officer queue, 72h predictive radar, and citizen verification active right out of the box!
-
-### Option 2: Full-Stack Hybrid (Next.js on Vercel + FastAPI on Cloud Run / Railway / Render)
-For municipal high-throughput enterprise deployments with persistent PostgreSQL:
-- **Frontend (Next.js)**: Deploy on **Vercel**
-  - Set Environment Variable: `NEXT_PUBLIC_API_URL=https://your-fastapi-service.up.railway.app/api/v1`
-- **Backend (FastAPI)**: Deploy on **Railway**, **Render**, or **Google Cloud Run**
-  - Root Directory: `apps/api`
-  - Build Command: `pip install -r requirements.txt`
-  - Start Command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-  - Environment Variables: `ENVIRONMENT=production`, `JWT_SECRET=<32-char-random-secret>`, `CORS_ORIGINS=https://your-frontend.vercel.app`
-
-### Option 3: Single-Host Docker Compose
-Run the entire sovereign stack with PostgreSQL in a single command:
 ```bash
 docker compose up --build -d
 ```
+
 - Web Application: `http://localhost:3000`
-- API Backend: `http://localhost:8000`
+- FastAPI Backend: `http://localhost:8000`
 - PostgreSQL: `localhost:5432`
 
 ---
 
-## 🔒 Security & Privacy Posture
+## Demo Accounts & Testing
 
-- **Argon2 Password Hashing**: State-of-the-art cryptographic password storage.
-- **Signed JWT Bearer Tokens**: Stateless, expiring token authentication with role claims.
-- **Strict Content Security & CORS**: Configured cross-origin resource sharing policies preventing unauthorized domain access.
-- **Zero PII Exposure**: Citizen names and phone numbers are isolated from the spatial GIS mapping layer and AI model prompts.
+### Pre-Seeded Demonstration Credentials
+
+| Role | Email | Password | Portal Access |
+|---|---|---|---|
+| **Citizen** | `citizen@jansutra.in` | `Citizen@123` | Citizen Hub, BhashaBridge Intake, Case Verification |
+| **Officer** | `officer@jansutra.in` | `Officer@123` | Operations Queue, Master Incidents, Status Updates |
+| **Administrator** | `admin@jansutra.in` | `Admin@123` | Full Municipal Oversight, Incident Register, Analytics |
+
+> Staff accounts can also be provisioned securely via CLI:  
+> `python -m scripts.create_staff --name "Officer Name" --email name@agency.gov.in --role officer --ward "Ward 12"`
+
+### Verification & Training Commands
+
+```bash
+# Backend unit & lifecycle tests
+cd apps/api && pytest
+
+# Retrain optional TF-IDF grievance classifier
+cd apps/api && python training/train_classifier.py --input training/data/grievances.csv
+
+# Frontend production build & lint check
+npm run build
+npm run lint
+```
 
 ---
 
-## 📜 Municipal Sovereign Matrix Charter
+## Deployment & Documentation
 
-*JAN-SUTRA AI is built on the fundamental principle that technology in public service must increase accountability rather than obscure it. A closed ticket is never a finished resolution until verified by the citizen who reported it.*
+- **Zero-Config Vercel Deployment:** Root `vercel.json` builds `apps/web` with native `/api/v1/[...route]` serverless handlers for instant preview/production hosting.
+- **Hybrid Production Deployment:** Host `apps/web` on Vercel (with `NEXT_PUBLIC_API_URL` configured) and `apps/api` on Railway, Render, or Google Cloud Run backed by managed PostgreSQL and a 32+ character `JWT_SECRET`.
+
+### Technical Documentation
+- [Architecture Notes](docs/architecture.md) — System boundaries, complaint state diagram, and production evolution roadmap.
+- [Model Card](docs/model-card.md) — Intended use, starter dataset details, known limitations, and pre-deployment evaluation requirements.
+- [Validation & Release Scope](docs/validation-and-scope.md) — Verified checks and explicit prototype boundaries.
